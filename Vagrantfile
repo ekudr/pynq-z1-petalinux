@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.define "bionic", primary: true do |bionic|
 		bionic.vm.box = "ubuntu/bionic64"
-		bionic.vm.synced_folder ".", "/zynq", 
+		bionic.vm.synced_folder "./zynq", "/zynq", 
 			owner: "vagrant", group: "vagrant"
 		bionic.vm.provider "virtualbox" do |vb|
 			vb.gui = false
