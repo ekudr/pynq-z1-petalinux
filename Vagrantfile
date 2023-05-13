@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
 		bionic.vm.synced_folder ".", "/zynq", 
 			owner: "vagrant", group: "vagrant"
 		bionic.vm.provider "virtualbox" do |vb|
-			vb.gui = true
+			vb.gui = false
 			vb.name = "zynq_ubuntu_18_04"
 			vb.memory = "8192"
 			vb.customize ["modifyvm", :id, "--vram", "128"]
