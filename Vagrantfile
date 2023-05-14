@@ -52,6 +52,5 @@ Vagrant.configure("2") do |config|
 		bionic.vm.provision "shell", inline: <<-SHELL
 			cat /root/.profile | grep PATH >> /home/vagrant/.profile
 		SHELL
-
  	end
 end
